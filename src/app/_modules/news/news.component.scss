@@ -1,0 +1,27 @@
+.wrapper-container{
+  display: flex;
+  justify-content: space-around;
+  height: 98%;
+  flex-wrap: wrap;
+}
+.search-list{
+  border: 1px solid;
+  width: 45%;
+}
+.news-details{
+  border: 1px solid;
+  width: 45%;
+  margin-left: 139px;
+}
+@media only screen and (max-width: 1422px) {
+  .search-list{
+    border: 1px solid;
+    width: 89%;
+    margin-right: -144px;
+  }
+  .news-details{
+    border: 1px solid;
+    width: 89%;
+    margin-right: -144px;
+  }
+}
