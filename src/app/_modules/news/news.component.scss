@@ -1,3 +1,6 @@
+.wrapper-container{
+  font-family: 'iransans';
+}
 .row{
   width: 100%;
   display: flex;
@@ -38,6 +41,27 @@
   border-radius: 5px;
   box-sizing: border-box;
   visibility: hidden;
+}
+h4{
+  margin: 7px;
+}
+.news-information{
+  border: 1px solid;
+  height: 30vh;
+  margin: 10px;
+  border-radius: 5px;
+}
+.news-subject{
+  border: 1px solid;
+  height: 30vh;
+  margin: 10px;
+  border-radius: 5px;
+}
+.news-reporters{
+  border: 1px solid;
+  height: 30vh;
+  margin: 10px;
+  border-radius: 5px;
 }
 @media (max-width: 1100px) {
   .news-details{
