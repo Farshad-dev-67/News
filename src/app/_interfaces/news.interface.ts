@@ -1,4 +1,4 @@
-export interface INewsInterface {
+export interface INews {
     id: number;
     title: string;
     lead: string;

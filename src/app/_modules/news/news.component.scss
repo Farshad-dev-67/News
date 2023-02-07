@@ -1,5 +1,5 @@
 .wrapper-container{
-  font-family: 'iransans';
+  font-family: 'iransans', serif;
 }
 .row{
   width: 100%;
@@ -27,7 +27,6 @@
   border: 1px solid;
   width: 48%;
   height: 90px;
-  margin-top: 12px;
   border-radius: 5px;
   box-sizing: border-box;
   margin: 10px;
@@ -37,7 +36,6 @@
   width: 48%;
   margin: 10px;
   height: 90px;
-  margin-top: 12px;
   border-radius: 5px;
   box-sizing: border-box;
   visibility: hidden;
@@ -48,22 +46,37 @@ h4{
 .news-information{
   border: 1px solid;
   height: auto;
+  min-height: 30vh;
   margin: 10px;
   border-radius: 5px;
 }
 .news-subject{
   border: 1px solid;
-  height: 30vh;
+  height: auto;
+  min-height: 30vh;
   margin: 10px;
   border-radius: 5px;
 }
 .news-reporters{
   border: 1px solid;
-  height: 30vh;
+  height: auto;
   margin: 10px;
   border-radius: 5px;
+  min-height: 30vh;
 }
-@media (max-width: 1100px) {
+//@media (max-width: 1100px) {
+//
+//  .news-details {
+//    border: 1px solid;
+//    width: 49%;
+//  }
+//}
+@media only screen and (max-width: 1422px) {
+  .search-list{
+    border: 1px solid;
+    width: 89%;
+    margin-right: -144px;
+  }
   .news-details{
     width: 98%;
   }
@@ -76,4 +89,4 @@ h4{
   .search-hidden{
     display: none;
   }
-}   
+}

@@ -1,6 +1,6 @@
-import { INewsInterface } from "../_interfaces/news.interface";
+import { INews } from "../_interfaces/news.interface";
 
-export const newsData: INewsInterface[] = [
+export const newsData: INews[] = [
     {
       id: 1,
       title: "عفو محکومان تحریکات ضدانقلاب را بی‌اثر می‌کند",

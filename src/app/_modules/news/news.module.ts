@@ -8,6 +8,10 @@ import { NewsSpecificationsComponent } from './news-specifications/news-specific
 import { NewsSubjectComponent } from './news-subject/news-subject.component';
 import { ReportersListComponent } from './reporters-list/reporters-list.component';
 import { MaterialModule } from '../material/material.module';
+import {ServicesService} from "../../_sevices/services.service";
+import {NewsService} from "../../_sevices/news.service";
+import {ReportersService} from "../../_sevices/reporters.service";
+import { SubjectDialogComponent } from './subject-dialog/subject-dialog.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,18 @@ import { MaterialModule } from '../material/material.module';
     NewsListComponent,
     NewsSpecificationsComponent,
     NewsSubjectComponent,
-    ReportersListComponent
+    ReportersListComponent,
+    SubjectDialogComponent
   ],
   imports: [
     CommonModule,
     NewsRoutingModule,
     MaterialModule
+  ],
+  providers:[
+    ServicesService,
+    NewsService,
+    ReportersService
   ]
 })
 export class NewsModule { }

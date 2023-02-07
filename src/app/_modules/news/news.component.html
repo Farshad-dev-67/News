@@ -15,17 +15,20 @@
             <div class="news-information">
                 <h4>مشخصات خبر</h4>
                 <div *ngIf="newsItem">
-                    <app-news-specifications [itemSpecificaton]="newsItem"></app-news-specifications>
+                    <app-news-specifications [itemSpecification]="newsItem"></app-news-specifications>
                 </div>
-              
+
             </div>
             <div class="news-subject">
                 <h4>موضوع انتخاب شده برای خبر</h4>
+                <div *ngIf="newsItem">
+                    <app-news-subject [itemServices]="newsItem"></app-news-subject>
+                </div>
             </div>
             <div class="news-reporters">
                 <h4>لیست خبرنگاران</h4>
                 <div *ngIf="newsItem?.hasReporter">
-                    <app-reporters-list></app-reporters-list>
+                    <app-reporters-list [itemReporter]="newsItem"></app-reporters-list>
                 </div>
             </div>
         </div>

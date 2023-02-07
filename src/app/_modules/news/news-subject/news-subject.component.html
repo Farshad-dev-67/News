@@ -1,1 +1,7 @@
-<p>news-subject works!</p>
+<div class="container">
+    <mat-card *ngIf="getItemService">
+        <mat-card-content>
+           <p>{{getItemService.title}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,1 +1,11 @@
-<p>reporters-list works!</p>
+<div class="container">
+    <mat-card>
+        <mat-card-content>
+            <ul *ngFor="let item of reporterFilter">
+                <li>
+                    <p>{{item.name}}</p>
+                </li>
+            </ul>
+        </mat-card-content>
+    </mat-card>
+</div>

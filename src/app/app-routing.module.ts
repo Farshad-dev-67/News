@@ -5,6 +5,11 @@ const routes: Routes = [
     {
         path: 'news',
         loadChildren: () => import('./_modules/news/news.module').then(m => m.NewsModule)
+    },
+    {
+        path: '',
+        redirectTo: 'news',
+        pathMatch: 'full'
     }
 ];
 

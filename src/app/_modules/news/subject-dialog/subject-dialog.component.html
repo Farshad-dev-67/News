@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="close-content">
+        <button class="close" mat-button (click)="onNoClick()">X</button>
+    </div>
+    <ul>
+        <li *ngFor="let item of subjectList;let i = index">
+            <p (click)="sendItemAfterClose(item)"> {{(i+1)}} - {{item.title}} </p>
+        </li>
+    </ul>
+</div>
