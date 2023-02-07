@@ -8,12 +8,16 @@
     <div class="row">
         <div class="news-list">
             <h4>لیست اخبار</h4>
-            <app-news-list></app-news-list>
+            <app-news-list (newsItem)="getItem($event)"></app-news-list>
         </div>
         <div class="news-details">
             <h4>جزئیات خبر</h4>
             <div class="news-information">
                 <h4>مشخصات خبر</h4>
+                <div *ngIf="newsItem">
+                    <app-news-specifications [itemSpecificaton]="newsItem"></app-news-specifications>
+                </div>
+              
             </div>
             <div class="news-subject">
                 <h4>موضوع انتخاب شده برای خبر</h4>

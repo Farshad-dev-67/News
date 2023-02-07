@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { AfterViewInit, Component, ElementRef, EventEmitter, OnInit, Output } from '@angular/core';
 import { INewsInterface } from 'src/app/_interfaces/news.interface';
 import { NewsService } from 'src/app/_sevices/news.service';
 
@@ -8,6 +9,7 @@ import { NewsService } from 'src/app/_sevices/news.service';
   styleUrls: ['./news-list.component.scss']
 })
 export class NewsListComponent implements OnInit, AfterViewInit {
+  @Output() newsItem = new EventEmitter<INewsInterface>;
   data!: INewsInterface[];
   constructor(private newsList: NewsService) { }
   ngAfterViewInit(): void {
@@ -29,8 +31,8 @@ export class NewsListComponent implements OnInit, AfterViewInit {
       this.data = res;
     })
   }
-  loaded(event: any) {
-    debugger
+  
+  emitItem(item: INewsInterface){
+    this.newsItem.emit(item);
   }
-
 }
