@@ -8,11 +8,11 @@ import { INewsInterface } from 'src/app/_interfaces/news.interface';
 })
 export class NewsSpecificationsComponent implements  OnChanges {
   @Input() itemSpecificaton!: INewsInterface;
+  item!: INewsInterface;
   constructor(){
 
   }
   ngOnChanges(changes: SimpleChanges){
-    this.itemSpecificaton;
-    debugger
+   this.item = this.itemSpecificaton;
   }
 }
