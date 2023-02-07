@@ -13,13 +13,14 @@ import {IServices} from "../../../_interfaces/services.interface";
 export class NewsSubjectComponent implements OnChanges {
     @Input() itemServices!: INews;
     servicesFilter: any [] = [];
-    getItemService!: IServices;
+    getItemService!: IServices | undefined;
 
     constructor(private servicesService: ServicesService,
                 public dialog: MatDialog) {
     }
 
     ngOnChanges(changes: SimpleChanges): void {
+        this.getItemService = undefined;
         this.servicesService.getServices().subscribe((res) => {
             this.servicesFilter = res.filter((o1) => {
                 return this.itemServices.services.some(function (o2) {
