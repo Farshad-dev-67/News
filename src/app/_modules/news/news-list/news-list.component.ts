@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { INewsInterface } from 'src/app/_interfaces/news.interface';
 import { NewsService } from 'src/app/_sevices/news.service';
 
@@ -7,12 +7,30 @@ import { NewsService } from 'src/app/_sevices/news.service';
   templateUrl: './news-list.component.html',
   styleUrls: ['./news-list.component.scss']
 })
-export class NewsListComponent implements OnInit {
+export class NewsListComponent implements OnInit, AfterViewInit {
   data!: INewsInterface[];
-  constructor(private newsList: NewsService){}
+  constructor(private newsList: NewsService) { }
+  ngAfterViewInit(): void {
+    const ul = document.getElementsByClassName('someClass');
+    var a: any = ul[0];
+    a.focus();
+    document.addEventListener('keydown', (e) => {
+      switch (e.key) {
+        case 'ArrowUp':
+          break;
+        case 'ArrowDown':
+          break;
+      }
+    })
+  }
   ngOnInit(): void {
+
     this.newsList.getNews().subscribe((res) => {
       this.data = res;
     })
   }
+  loaded(event: any) {
+    debugger
+  }
+
 }

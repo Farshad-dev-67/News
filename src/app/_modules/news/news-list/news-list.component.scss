@@ -1,5 +1,5 @@
 ul{
-    line-height: 3;
+    line-height: 2;
     list-style-type: none;
     margin-right: -32px;
 
@@ -7,4 +7,8 @@ ul{
 ul li:hover{
     background-color: rgb(209, 209, 209);
     cursor: pointer;
+}
+li.someClass:focus{
+    background-color: rgb(209, 209, 209);
+    // border: 0 !important; 
 }
