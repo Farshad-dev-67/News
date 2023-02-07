@@ -10,5 +10,6 @@ export class NewsComponent {
   newsItem!: INewsInterface;
   getItem(event: INewsInterface) {
     this.newsItem = event;
+    debugger
   }
 }

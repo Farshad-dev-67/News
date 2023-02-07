@@ -24,6 +24,9 @@
             </div>
             <div class="news-reporters">
                 <h4>لیست خبرنگاران</h4>
+                <div *ngIf="newsItem?.hasReporter">
+                    <app-reporters-list></app-reporters-list>
+                </div>
             </div>
         </div>
     </div>

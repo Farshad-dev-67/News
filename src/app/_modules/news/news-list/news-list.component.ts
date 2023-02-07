@@ -13,17 +13,17 @@ export class NewsListComponent implements OnInit, AfterViewInit {
   data!: INewsInterface[];
   constructor(private newsList: NewsService) { }
   ngAfterViewInit(): void {
-    const ul = document.getElementsByClassName('someClass');
-    var a: any = ul[0];
-    a.focus();
-    document.addEventListener('keydown', (e) => {
-      switch (e.key) {
-        case 'ArrowUp':
-          break;
-        case 'ArrowDown':
-          break;
-      }
-    })
+    // const ul = document.getElementsByClassName('someClass');
+    // var a: any = ul[0];
+    // a.focus();
+    // document.addEventListener('keydown', (e) => {
+    //   switch (e.key) {
+    //     case 'ArrowUp':
+    //       break;
+    //     case 'ArrowDown':
+    //       break;
+    //   }
+    // })
   }
   ngOnInit(): void {
 
