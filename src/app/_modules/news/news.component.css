@@ -1,0 +1,97 @@
+.wrapper-container {
+  font-family: "iransans", serif;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.news-list {
+  border: 1px solid;
+  width: 48%;
+  min-height: 100vh;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.news-details {
+  border: 1px solid;
+  width: 48%;
+  min-height: 100vh;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.search {
+  border: 1px solid;
+  width: 48%;
+  height: 90px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.search-hidden {
+  border: 1px solid;
+  width: 48%;
+  margin: 10px;
+  height: 90px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  visibility: hidden;
+}
+
+h4 {
+  margin: 7px;
+}
+
+.news-information {
+  border: 1px solid;
+  height: auto;
+  min-height: 30vh;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.news-subject {
+  border: 1px solid;
+  height: auto;
+  min-height: 30vh;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.news-reporters {
+  border: 1px solid;
+  height: auto;
+  margin: 10px;
+  border-radius: 5px;
+  min-height: 30vh;
+}
+
+@media only screen and (max-width: 1422px) {
+  .search-list {
+    border: 1px solid;
+    width: 89%;
+    margin-right: -144px;
+  }
+  .news-details {
+    width: 98%;
+  }
+  .news-list {
+    width: 98%;
+  }
+  .search {
+    width: 99%;
+  }
+  .search-hidden {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=news.component.css.map */
