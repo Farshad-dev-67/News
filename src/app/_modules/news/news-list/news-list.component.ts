@@ -10,28 +10,48 @@ import { NewsService } from 'src/app/_sevices/news.service';
 export class NewsListComponent implements OnInit, AfterViewInit {
   @Output() newsItem = new EventEmitter<INews>;
   data!: INews[];
-  constructor(private newsList: NewsService) { }
+  count = 0;
+  constructor(private newsService: NewsService) { }
   ngAfterViewInit(): void {
-    // const ul = document.getElementsByClassName('someClass');
-    // var a: any = ul[0];
-    // a.focus();
-    // document.addEventListener('keydown', (e) => {
-    //   switch (e.key) {
-    //     case 'ArrowUp':
-    //       break;
-    //     case 'ArrowDown':
-    //       break;
-    //   }
-    // })
+    setTimeout(() => {
+      const li: any = document.getElementsByClassName('someClass');
+      let arr: any = [].slice.call(li);
+      arr[0].focus();
+    }, 1000);
+    document.addEventListener('keydown', (e) => {
+      switch (e.key) {
+        case 'ArrowUp':
+          this.count--;
+          if (this.count < 0) {
+            this.count = 0;
+          }
+          const li_up = document.getElementsByClassName('someClass');
+          let arr_up: any = [].slice.call(li_up);
+          if (this.count >= 0) {
+            arr_up[this.count].focus();
+          }
+          break;
+        case 'ArrowDown':
+          this.count++;
+          if (this.count >= this.data.length) {
+            this.count = this.data.length - 1;
+            return;
+          }
+          const li_down = document.getElementsByClassName('someClass');
+          let arr_down: any = [].slice.call(li_down);
+          if (this.count < arr_down.length) {
+            arr_down[this.count].focus();
+          }
+          break;
+      }
+    })
   }
   ngOnInit(): void {
-
-    this.newsList.getNews().subscribe((res) => {
+    this.newsService.subject.subscribe((res) => {
       this.data = res;
     })
   }
-  
-  emitItem(item: INews){
+  emitItem(item: INews) {
     this.newsItem.emit(item);
   }
 }

@@ -64,13 +64,21 @@ h4{
   border-radius: 5px;
   min-height: 30vh;
 }
-//@media (max-width: 1100px) {
-//
-//  .news-details {
-//    border: 1px solid;
-//    width: 49%;
-//  }
-//}
+::ng-deep .mat-mdc-text-field-wrapper{
+  width: 96% !important;
+  margin: 15px !important;
+}
+.mat-mdc-form-field{
+  display: flex !important;
+  align-items: center !important;
+  margin-top: 0px !important;
+}
+::ng-deep.mdc-floating-label{
+  font-family: 'iransans' !important;
+}
+::ng-deep .mat-mdc-input-element{
+  font-family: 'iransans' !important;
+}
 @media only screen and (max-width: 1422px) {
   .search-list{
     border: 1px solid;

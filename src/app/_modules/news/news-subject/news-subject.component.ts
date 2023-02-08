@@ -37,6 +37,8 @@ export class NewsSubjectComponent implements OnChanges {
                     this.getItemService = result;
                 }
             });
+        } else {
+            this.getItemService = this.servicesFilter[0];
         }
     }
 }

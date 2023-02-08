@@ -1,7 +1,11 @@
 <div class="wrapper-container">
     <div class="row">
         <div class="search">
-            <h4>جستجو بر اساس موضوع و عنوان</h4>
+            <mat-form-field dir="rtl" class="example-full-width" appearance="outline">
+                <mat-label>جستجو بر اساس موضوع و عنوان</mat-label>
+                <input (keyup)="inpSearch($event)" type="search" matInput>
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
         </div>
         <div class="search-hidden"></div>
     </div>
